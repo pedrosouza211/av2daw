@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KeyFalls - Controle de Concursos Públicos</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>KeyFalls - Controle de Concursos Públicos</h1>
+
+    <h2>Listar Candidatos</h2>
+    <button onclick="listarCandidatos()">Listar</button>
+    <div id="listar-candidatos"></div>
+
+    <h2>Incluir Fiscal de Prova</h2>
+    <form id="incluir-fiscal-form" onsubmit="event.preventDefault(); incluirFiscalProva()">
+        <label for="fiscal-nome">Nome:</label>
+        <input type="text" id="fiscal-nome" required><br>
+
+        <label for="fiscal-cpf">CPF:</label>
+        <input type="text" id="fiscal-cpf" required><br>
+
+        <label for="fiscal-sala">Sala de Prova:</label>
+        <input type="text" id="fiscal-sala" required><br>
+
+        <button type="submit">Incluir</button>
+    </form>
+
+    <h2>Alterar Sala de Prova de Candidato</h2>
+    <form id="alterar-sala-form" onsubmit="event.preventDefault(); alterarSalaProva()">
+        <label for="candidato-cpf">CPF do Candidato:</label>
+        <input type="text" id="candidato-cpf" required><br>
+
+        <label for="nova-sala">Nova Sala de Prova:</label>
+        <input type="text" id="nova-sala" required><br>
+
+        <button type="submit">Alterar</button>
+    </form>
+
+    <div id="mensagem"></div>
+</body>
+</html>
